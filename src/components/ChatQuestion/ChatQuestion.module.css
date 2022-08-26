@@ -1,0 +1,13 @@
+.main {
+    background-color: white;
+    width: 600px;
+}
+
+.help {
+    color: dodgerblue;
+    border: 2px solid dodgerblue;
+    border-radius: 50%;
+    text-align: center;
+    width: 10em;
+    height: 10em;
+}
