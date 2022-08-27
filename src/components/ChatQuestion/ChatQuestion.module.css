@@ -29,7 +29,7 @@
     margin-left: 10px;
 }
 .questionList {
-    width: 600px;
+    max-width: 1087px;
     background-color: white;
     border: 2px solid darkgrey;
     border-radius: 10px;
@@ -67,7 +67,28 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 600px;
+    max-width: 1087px;
 }
 
 
+
+/* PC */
+@media (max-width: 1087px) {
+    .main{
+        max-width: 970px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .main{
+        max-width: 750px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .main{
+        max-width: none;
+    }
+}

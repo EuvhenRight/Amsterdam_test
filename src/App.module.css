@@ -1,23 +1,11 @@
-
-.chatQuestions {
-  background-color: lightgrey;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.help {
-  color: dodgerblue;
-  border: 2px solid dodgerblue;
-  border-radius: 50%;
-  text-align: center;
-  width: 1em;
-  height: 1em;
-}
-
 .components {
-
+    background-color: lightgrey;
+    min-height: 100vh;
+    max-width: 1087px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
