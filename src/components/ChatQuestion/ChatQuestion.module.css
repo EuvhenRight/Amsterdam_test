@@ -1,6 +1,7 @@
 .main {
     background-color: lightgray;
     padding-left: 40px;
+    background-size:100%;
 }
 .chatQuestions {
     background-color: lightgrey;

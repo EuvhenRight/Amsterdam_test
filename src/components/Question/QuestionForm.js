@@ -3,7 +3,7 @@ import classes from "./QuestionForm.module.css";
 
 
 export const QuestionForm = ({onSubmit}) => {
-    let [value, setValue] = useState('')
+    let [value, setValue] = useState(null)
 
     const handleChangeQuestion = (e) => {
         setValue(e.target.value)
@@ -15,31 +15,31 @@ export const QuestionForm = ({onSubmit}) => {
         setValue('')
     }
 
+    console.log(value)
+
     return (
         <form onSubmit={handleSubmit}>
             <div className={classes.formText}> Question
                 <div>
-                <input className={classes.input}
-                    value={value}
-                    onChange={handleChangeQuestion}
-                    type="text"/>
-                     </div>
+                    <input className={classes.input}
+                           value={value}
+                           onChange={handleChangeQuestion}
+                           type="text"/>
+                </div>
             </div>
             <div className={classes.formText}> Answer {/* TODO did not reach */}
                 <div>
-                <input className={classes.input}
-                    onChange={handleChangeQuestion}
-                    type="text"/>
-                    </div>
+                    <input className={classes.input}
+                           onChange={handleChangeQuestion}
+                           type="text"/>
+                </div>
             </div>
             <div>
-                <button className={classes.CreateBut}> Create Question</button>
+                {!value ? <button disabled>Create Question</button> :
+                    <button className={classes.CBut}> Create Question</button>}
             </div>
-
-
         </form>
     )
-
-
 }
+
 
