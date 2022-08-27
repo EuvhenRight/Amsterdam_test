@@ -3,7 +3,9 @@ export const DELETE_CHAT_QUESTION = "MESSAGES::DELETE_CHAT_QUESTION";
 export const EDIT_CHAT_QUESTION = "MESSAGES::EDIT_CHAT_QUESTION";
 
 
-const initialState = []; // TODO need create object, add isFetching: boolean!!!
+const initialState = [
+        {id: '', author: "Q:", text: "Hi!"}
+] // TODO need create object, add isFetching: boolean!!!
 
 export const ChatQuestionReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -14,6 +16,7 @@ export const ChatQuestionReducer = (state = initialState, action) => {
                 text: action.payload.text
             },]
         }
+            debugger
         case DELETE_CHAT_QUESTION: {
             return state.filter(({id}) => id !== action.payload)
 

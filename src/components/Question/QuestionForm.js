@@ -1,9 +1,11 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import classes from "./QuestionForm.module.css";
 
 
 export const QuestionForm = ({onSubmit}) => {
     let [value, setValue] = useState(null)
+
+    useEffect(() => {},[])
 
     const handleChangeQuestion = (e) => {
         setValue(e.target.value)
@@ -30,6 +32,7 @@ export const QuestionForm = ({onSubmit}) => {
             <div className={classes.formText}> Answer {/* TODO did not reach */}
                 <div>
                     <input className={classes.input}
+                           value={value}
                            onChange={handleChangeQuestion}
                            type="text"/>
                 </div>

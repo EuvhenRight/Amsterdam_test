@@ -15,25 +15,25 @@ const ChatQuestionList = () => {
     // const [fetching, setFetching] = useState(false); // TODO add add <Preloader />
     const dispatch = useDispatch();
 
-    const handleAddChat = (text, author) => {
-        const newChatQ = {
-            id: `chatQ-${Date.now()}`,
-            author,
-            text,
-        }
-        dispatch(AddChatQWithThunk(newChatQ, AUTHORS.ME, text))
+    const handleAddChat = (text) => {
+        dispatch(AddChatQWithThunk(`chatQ-${Date.now()}`, AUTHORS.ME, text))
     };
-    console.log(chatQ)
+
     return (
         <>
             <div className={classes.main}>
                 <div className={classes.chatQuestions}> Created Questions
-                    <span className={classes.help}>?</span> {/* TODO need it is UseToggle */}
+                    <span className={classes.help}>?
+                  <div className={classes.showMe}>You can find created questions and answers here</div>
+                  </span>
+                    {/* add : hover  */}
                 </div>
                 <div className={classes.questionList}>
                     {/*<div> {fetching ? <div>loading...</div> : null} TODO need add <Preloader />*/}
                     {chatQ.map((chatQ) => (
-                        <ChatQuestionItem key={chatQ.id} chatQ={chatQ}/>
+                        <div className={classes.questionItem}>
+                            <ChatQuestionItem key={chatQ.id} chatQ={chatQ}/>
+                        </div>
                     ))}
                 </div>
                 <div className={classes.buttonQuestionlist}>
@@ -41,11 +41,13 @@ const ChatQuestionList = () => {
                         : <button disabled> Sort Question</button>}
                     {/* TODO need it is necessary to put array.sort */}
                     {chatQ.length !== 0 ? <button className={classes.remBut}> Remove All Question</button>
-                    : <button disabled> Remove All Question</button>}
+                        : <button disabled> Remove All Question</button>}
                     {/* TODO need it is necessary to put AC delete all */}
                 </div>
                 <div className={classes.addQuestions}> Create a New Questions
-                    <span className={classes.help}>?</span> {/* TODO need it is UseToggle */}
+                    <span className={classes.help}>?
+                  <div className={classes.showMe}>You can find created questions and answers here</div>
+                  </span>
                 </div>
                 <div className={classes.formQ}>
                     <QuestionForm onSubmit={handleAddChat}/>
