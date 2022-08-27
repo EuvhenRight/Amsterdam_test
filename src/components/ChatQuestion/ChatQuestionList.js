@@ -6,6 +6,7 @@ import {AddChatQWithThunk} from "../redux/ChatQuestion/ChatQuestionReducer";
 import {selectChatQuestions} from "../redux/ChatQuestion/selector";
 import {AUTHORS} from "../utils/constants";
 import classes from "./ChatQuestion.module.css";
+import React from "react";
 
 
 const ChatQuestionList = () => {
@@ -25,19 +26,28 @@ const ChatQuestionList = () => {
 
     return (
         <>
-            <div className={classes.main}> Created question
-                <span className={classes.help}>?</span> {/* TODO need it is UseToggle */}
-                {/*<div> {fetching ? <div>loading...</div> : null} TODO need add <Preloader />*/}
+            <div className={classes.main}>
+                <div className={classes.chatQuestions}> Created Questions
+                    <span className={classes.help}>?</span> {/* TODO need it is UseToggle */}
+                </div>
+                <div className={classes.questionList}>
+                    {/*<div> {fetching ? <div>loading...</div> : null} TODO need add <Preloader />*/}
                     {chatQ.map((chatQ) => (
                         <ChatQuestionItem key={chatQ.id} chatQ={chatQ}/>
                     ))}
                 </div>
-            <div>
-                <button> Sort Question</button> {/* TODO need it is necessary to put array.sort */}
-                <button> Remove All Question</button> {/* TODO need it is necessary to put AC delete all */}
-            </div>
-            <div>
-                <QuestionForm onSubmit={handleAddChat}/>
+                <div className={classes.buttonQuestionlist}>
+                    <button className={classes.sortBut}> Sort Question</button>
+                    {/* TODO need it is necessary to put array.sort */}
+                    <button className={classes.remBut}> Remove All Question</button>
+                    {/* TODO need it is necessary to put AC delete all */}
+                </div>
+                <div className={classes.addQuestions}> Create a New Questions
+                    <span className={classes.help}>?</span> {/* TODO need it is UseToggle */}
+                </div>
+                <div className={classes.formQ}>
+                    <QuestionForm onSubmit={handleAddChat}/>
+                </div>
             </div>
             <Outlet/>
         </>

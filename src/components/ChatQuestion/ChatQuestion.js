@@ -8,7 +8,7 @@ import QuestionList from "../Question/QuestionList";
 import {QuestionForm} from "../Question/QuestionForm";
 
 
-function ChatQuestion () { {/* TODO dont work and I dont no why...*/}
+function ChatQuestion () { {/* TODO don't work and I dont no why...*/}
 
     const {questId} = useParams();
 

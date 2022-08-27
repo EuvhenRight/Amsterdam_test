@@ -1,4 +1,5 @@
 import {useState} from "react";
+import classes from "./QuestionForm.module.css";
 
 
 export const QuestionForm = ({onSubmit}) => {
@@ -16,19 +17,23 @@ export const QuestionForm = ({onSubmit}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <span> Question
-                <input
+            <div className={classes.formText}> Question
+                <div>
+                <input className={classes.input}
                     value={value}
                     onChange={handleChangeQuestion}
                     type="text"/>
-            </span>
-            <span> Answer {/* TODO did not reach */}
-                <input
+                     </div>
+            </div>
+            <div className={classes.formText}> Answer {/* TODO did not reach */}
+                <div>
+                <input className={classes.input}
                     onChange={handleChangeQuestion}
                     type="text"/>
-            </span>
+                    </div>
+            </div>
             <div>
-                <button> Create Question</button>
+                <button className={classes.CreateBut}> Create Question</button>
             </div>
 
 

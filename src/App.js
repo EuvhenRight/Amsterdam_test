@@ -10,13 +10,13 @@ import ChatQuestion from "./components/ChatQuestion/ChatQuestion";
 const App = () => {
     return (
         <BrowserRouter>
-            <div className={classes.AppHeader} >
+                <div className={classes.components}>
                 <Routes>
                     <Route path="/" element={<ChatQuestionList/>}>
                         <Route path=":chatQId" element={<ChatQuestion/>}/> {/* TODO dont work and I dont no why... */}
                     </Route>
                 </Routes>
-            </div>
+                </div>
         </BrowserRouter>
     )
 }

@@ -1,6 +1,22 @@
 .main {
-    background-color: white;
-    width: 600px;
+    background-color: lightgray;
+    padding-left: 40px;
+}
+.chatQuestions {
+    background-color: lightgrey;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.addQuestions {
+    background-color: lightgrey;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .help {
@@ -8,6 +24,50 @@
     border: 2px solid dodgerblue;
     border-radius: 50%;
     text-align: center;
-    width: 10em;
-    height: 10em;
+    width: 1em;
+    height: 1em;
+    margin-left: 10px;
 }
+.questionList {
+    width: 600px;
+    background-color: white;
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+    display: flex;
+    font-weight: bold;
+    align-items: stretch;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    flex-direction: column;
+    font-size: 12px;
+}
+.buttonQuestionlist {
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.sortBut {
+    background-color: darkslateblue;
+    color: white;
+    border: 2px solid mediumslateblue;
+    border-radius: 5px;
+    padding: 7px 5px;
+}
+.remBut {
+    background-color: darkred;
+    color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 7px 5px;
+    margin-left: 8px;
+}
+.formQ {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 600px;
+}
+
+
