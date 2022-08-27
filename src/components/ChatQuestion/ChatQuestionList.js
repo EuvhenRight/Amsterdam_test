@@ -23,7 +23,7 @@ const ChatQuestionList = () => {
         }
         dispatch(AddChatQWithThunk(newChatQ, AUTHORS.ME, text))
     };
-
+    console.log(chatQ)
     return (
         <>
             <div className={classes.main}>
@@ -37,9 +37,11 @@ const ChatQuestionList = () => {
                     ))}
                 </div>
                 <div className={classes.buttonQuestionlist}>
-                    <button className={classes.sortBut}> Sort Question</button>
+                    {chatQ.length !== 0 ? <button className={classes.sortBut}> Sort Question</button>
+                        : <button disabled> Sort Question</button>}
                     {/* TODO need it is necessary to put array.sort */}
-                    <button className={classes.remBut}> Remove All Question</button>
+                    {chatQ.length !== 0 ? <button className={classes.remBut}> Remove All Question</button>
+                    : <button disabled> Remove All Question</button>}
                     {/* TODO need it is necessary to put AC delete all */}
                 </div>
                 <div className={classes.addQuestions}> Create a New Questions
