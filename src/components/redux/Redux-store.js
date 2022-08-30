@@ -2,7 +2,6 @@ import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import thunk from "redux-thunk";
 import storage from "redux-persist/lib/storage";
 import {persistReducer, persistStore} from "redux-persist";
-import {QuestionReducer} from "./Question/QuestionReducer";
 import {ChatQuestionReducer} from "./ChatQuestion/ChatQuestionReducer";
 
 
@@ -14,7 +13,6 @@ const persistConfig = {
 
 let rootReducer = combineReducers({
     chatQ: ChatQuestionReducer,
-    questions: QuestionReducer,
 
 })
 
