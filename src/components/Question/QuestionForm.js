@@ -1,14 +1,13 @@
-import {useEffect, useState} from "react";
 import classes from "./QuestionForm.module.css";
+import {useState} from "react";
 
 
-export const QuestionForm = ({onSubmit}) => {
-    let [value, setValue] = useState(null)
-
-    useEffect(() => {},[])
+export const QuestionForm = ({chatQ,onSubmit}) => {
+    // eslint-disable-next-line no-undef
+    let [value, setValue] = useState()
 
     const handleChangeQuestion = (e) => {
-        setValue(e.target.value)
+        setValue(e.currentTarget.value)
     }
 
     const handleSubmit = (e) => {
@@ -17,13 +16,12 @@ export const QuestionForm = ({onSubmit}) => {
         setValue('')
     }
 
-    console.log(value)
-
     return (
         <form onSubmit={handleSubmit}>
             <div className={classes.formText}> Question
                 <div>
-                    <input className={classes.input}
+                     <input className={!value ? classes.input : classes.inputActive}
+                            key={chatQ.id}
                            value={value}
                            onChange={handleChangeQuestion}
                            type="text"/>
@@ -31,7 +29,7 @@ export const QuestionForm = ({onSubmit}) => {
             </div>
             <div className={classes.formText}> Answer {/* TODO did not reach */}
                 <div>
-                    <input className={classes.input}
+                    <input className={!value ? classes.input : classes.inputActive}
                            value={value}
                            onChange={handleChangeQuestion}
                            type="text"/>

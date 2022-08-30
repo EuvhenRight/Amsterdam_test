@@ -2,9 +2,8 @@ import {Outlet} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {QuestionForm} from "../Question/QuestionForm";
 import {ChatQuestionItem} from "../utils/ChatQuestionItem";
-import {AddChatQWithThunk} from "../redux/ChatQuestion/ChatQuestionReducer";
+import {AddChatQWithThunk, deleteAllQuestion} from "../redux/ChatQuestion/ChatQuestionReducer";
 import {selectChatQuestions} from "../redux/ChatQuestion/selector";
-import {AUTHORS} from "../utils/constants";
 import classes from "./ChatQuestion.module.css";
 import React from "react";
 
@@ -16,7 +15,12 @@ const ChatQuestionList = () => {
     const dispatch = useDispatch();
 
     const handleAddChat = (text) => {
-        dispatch(AddChatQWithThunk(`chatQ-${Date.now()}`, AUTHORS.ME, text))
+        dispatch(AddChatQWithThunk(text))
+    };
+
+
+    const handleAllDelete = (id) => {
+        dispatch(deleteAllQuestion(id));
     };
 
     return (
@@ -28,19 +32,20 @@ const ChatQuestionList = () => {
                   </span>
                     {/* add : hover  */}
                 </div>
-                <div className={classes.questionList}>
+                {chatQ.length !== 0 ? <div className={classes.questionList}>
                     {/*<div> {fetching ? <div>loading...</div> : null} TODO need add <Preloader />*/}
                     {chatQ.map((chatQ) => (
                         <div className={classes.questionItem}>
-                            <ChatQuestionItem key={chatQ.id} chatQ={chatQ}/>
+                             <ChatQuestionItem key={chatQ.id} chatQ={chatQ}/>
                         </div>
                     ))}
-                </div>
+                </div> : <div disabled className={classes.questionItemDisabled}> Add question a using below </div>}
                 <div className={classes.buttonQuestionlist}>
                     {chatQ.length !== 0 ? <button className={classes.sortBut}> Sort Question</button>
                         : <button disabled> Sort Question</button>}
                     {/* TODO need it is necessary to put array.sort */}
-                    {chatQ.length !== 0 ? <button className={classes.remBut}> Remove All Question</button>
+                    {chatQ.length !== 0 ?
+                        <button className={classes.remBut} onClick={handleAllDelete}> Remove All Question</button>
                         : <button disabled> Remove All Question</button>}
                     {/* TODO need it is necessary to put AC delete all */}
                 </div>
@@ -50,7 +55,7 @@ const ChatQuestionList = () => {
                   </span>
                 </div>
                 <div className={classes.formQ}>
-                    <QuestionForm onSubmit={handleAddChat}/>
+                    <QuestionForm key={chatQ.id} chatQ={chatQ} onSubmit={handleAddChat}/>
                 </div>
             </div>
             <Outlet/>

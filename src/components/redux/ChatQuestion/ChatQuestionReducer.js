@@ -1,50 +1,53 @@
+import {AUTHORS as AUTHOR} from "../../utils/constants";
+
 export const ADD_CHAT_QUESTION = "MESSAGES::ADD_CHAT_QUESTION";
 export const DELETE_CHAT_QUESTION = "MESSAGES::DELETE_CHAT_QUESTION";
 export const EDIT_CHAT_QUESTION = "MESSAGES::EDIT_CHAT_QUESTION";
+export const DELETE_ALL_CHAT_QUESTION = "MESSAGES::DELETE_ALL_CHAT_QUESTION";
+
+const initialState = []
 
 
-const initialState = [
-        {id: '', author: "Q:", text: "Hi!"}
-] // TODO need create object, add isFetching: boolean!!!
+
+
+// TODO need create object, add isFetching: boolean!!!
 
 export const ChatQuestionReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_CHAT_QUESTION: {
-            return [...state, {
-                id: action.payload.id,
-                author:action.payload.author,
-                text: action.payload.text
+        case ADD_CHAT_QUESTION:
+            return [...state, {id: `chatQ-${Date.now()}`, author: AUTHOR.ME,  text: action.payload.text
             },]
-        }
-            debugger
-        case DELETE_CHAT_QUESTION: {
+
+        case
+        DELETE_CHAT_QUESTION: {
             return state.filter(({id}) => id !== action.payload)
 
         }
         case
         EDIT_CHAT_QUESTION: {
-            const {chatQId, idToEdit, updQuest} = action.payload;
-            const editIndex = state[chatQId].findIndex((text) => text.id === idToEdit);// TODO not work!!!
+            const {id, idToEdit, updQuest} = action.payload;
+            const editIndex = state.findIndex((text) => text.id === idToEdit);// TODO not work!!!
 
-            const newState = {...state};
-            newState[chatQId][editIndex] = {
-                ...newState[chatQId][editIndex],
+            const newState = [...state];
+            newState[id][editIndex] = {
+                ...newState[id][editIndex],
                 text: updQuest,
             };
             return newState;
         }
-
+        case
+        DELETE_ALL_CHAT_QUESTION: {
+            return state.filter(({id}) => id === action.payload)
+        }
         default:
             return state;
     }
 }
 
-export const addChatQuestion = (id, author, text) => ({
+export const addChatQuestion = (text) => ({
     type: ADD_CHAT_QUESTION,
     payload: {
-        id,
-        author,
-        text
+        text,
     }
 });
 
@@ -63,11 +66,19 @@ export const editChatQuestion = (id, text, updQuest) => ({
     }
 });
 
+export const deleteAllQuestion = (id, idToDelete) => ({
+    type: DELETE_ALL_CHAT_QUESTION,
+    payload: {
+        id,
+        idToDelete,
+    },
+});
+
 let timeout
 
-export const AddChatQWithThunk = (id, author, text) => (dispatch) => {
+export const AddChatQWithThunk = (newText) => (dispatch) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-    dispatch(addChatQuestion(id, author, text));
+        dispatch(addChatQuestion(newText));
     },5000)
 }
