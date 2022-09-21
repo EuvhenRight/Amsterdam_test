@@ -1,9 +1,9 @@
 .questionMessage {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 5px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    /*padding-right: 5px;*/
     margin: 10px;
 }
 
@@ -16,10 +16,18 @@
     margin-left: 8px;
 }
 
-.ediBut {
+.editBut {
     background-color: darkslateblue;
     color: white;
     border: 2px solid mediumslateblue;
+    border-radius: 5px;
+    padding: 7px 5px;
+}
+
+.saveBut {
+    background-color: darkgreen;
+    color: white;
+    border: 2px solid limegreen;
     border-radius: 5px;
     padding: 7px 5px;
 }
