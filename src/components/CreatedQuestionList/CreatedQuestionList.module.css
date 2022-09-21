@@ -47,16 +47,14 @@
 .help:hover .showMe {
     display: block;
 }
-.questionList {
 
-}
 
 .questionItem {
     max-width: 1087px;
     background-color: white;
     border: 2px solid darkgrey;
     border-radius: 10px;
-    /*display: flex;*/
+    display: flex;
     font-weight: bold;
     align-items: stretch;
     padding-top: 10px;
@@ -113,23 +111,23 @@
 
 
 
-/* PC */
-@media (max-width: 1087px) {
-    .main{
-        max-width: 970px;
-    }
-}
+/*!* PC *!*/
+/*@media (max-width: 1087px) {*/
+/*    .main{*/
+/*        max-width: 970px;*/
+/*    }*/
+/*}*/
 
-/* Tablet */
-@media (max-width: 991px) {
-    .main{
-        max-width: 750px;
-    }
-}
+/*!* Tablet *!*/
+/*@media (max-width: 991px) {*/
+/*    .main{*/
+/*        max-width: 750px;*/
+/*    }*/
+/*}*/
 
-/* Mobile */
-@media (max-width: 767px) {
-    .main{
-        max-width: none;
-    }
-}
+/*!* Mobile *!*/
+/*@media (max-width: 767px) {*/
+/*    .main{*/
+/*        max-width: none;*/
+/*    }*/
+/*}*/

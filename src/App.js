@@ -1,8 +1,8 @@
-import './App.module.css';
+import './App.module.scss';
 import React from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import ChatQuestionList from "./components/ChatQuestion/ChatQuestionList";
-import classes from "./App.module.css";
+import CreatedQuestionList from "./components/CreatedQuestionList/CreatedQuestionList";
+import classes from "./App.module.scss";
 
 
 
@@ -12,7 +12,7 @@ const App = () => {
         <BrowserRouter>
                 <div className={classes.components}>
                 <Routes>
-                    <Route path="/" element={<ChatQuestionList/>}>
+                    <Route path="/" element={<CreatedQuestionList/>}>
                     </Route>
                 </Routes>
                 </div>
