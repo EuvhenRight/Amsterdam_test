@@ -44,7 +44,7 @@ const CreatedQuestionForm = ({chat}) => {
         todoContext = (
             <>
                 <div className={classes.questionMessage}>
-                    <span> {chat.text.substring(0, 500)} <p><ChatAuthors authorsId={chat.authorsId}/> </p>
+                    <span> text:{chat.text.substring(0, 500)} <p><ChatAuthors authorsId={chat.authorsId}/> </p>
             </span>
                     <EditButton setIsEditing={setIsEditing}/>
                     <DeleteButton {...chat} />

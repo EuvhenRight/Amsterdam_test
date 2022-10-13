@@ -57,7 +57,7 @@ export const chatQuestionSlice = createSlice({
 )
 
 
-export const {setAddChatQ, setAddChatA, deleteAddChat, deleteAllChat, sortChat, setEditText} = chatQuestionSlice.actions
+export const {setAddChatQ, deleteAddChat, deleteAllChat, sortChat, setEditText} = chatQuestionSlice.actions
 
 
 export default chatQuestionSlice.reducer
