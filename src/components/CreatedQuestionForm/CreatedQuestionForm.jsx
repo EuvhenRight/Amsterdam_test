@@ -13,7 +13,7 @@ import Preloader from "../Preloader/Preloader";
 const CreatedQuestionForm = ({chat}) => {
 
     const [isEditing, setIsEditing] = useState(false);
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
 
     // const [autoAnswer, setAutoAnswer] = useState(false)
 
@@ -26,17 +26,19 @@ const CreatedQuestionForm = ({chat}) => {
         }));
     }
 
-        let todoContext
+    let todoContext
     if (isEditing) {
         todoContext = (
             <>
-                <div className={classes.questionMessage}>
+                <div className={classes.questionMessageInput}>
                     <input
                         value={chat.text}
                         onChange={onChangeValue}/>
-                    <SaveButton setIsLoading={setIsLoading} setIsEditing={setIsEditing}/>
-                    <DeleteButton {...chat} />
-                    {isLoading && <Preloader/> }
+                    {isLoading && <Preloader/>}
+                    <span>
+                        <SaveButton setIsLoading={setIsLoading} setIsEditing={setIsEditing}/>
+                        <DeleteButton {...chat} />
+                    </span>
                 </div>
             </>
         );
@@ -44,10 +46,12 @@ const CreatedQuestionForm = ({chat}) => {
         todoContext = (
             <>
                 <div className={classes.questionMessage}>
-                    <span> text:{chat.text.substring(0, 500)} <p><ChatAuthors authorsId={chat.authorsId}/> </p>
+                    <span className={classes.text}> Text: {chat.text.substring(0, 500)} <p><ChatAuthors authorsId={chat.authorsId}/> </p>
             </span>
-                    <EditButton setIsEditing={setIsEditing}/>
-                    <DeleteButton {...chat} />
+                    <span>
+                        <EditButton setIsEditing={setIsEditing}/>
+                        <DeleteButton {...chat} />
+                    </span>
                 </div>
 
             </>
