@@ -10,7 +10,7 @@ import LEARNING from "../utils/Learning.jpeg";
 import THEATER from "../utils/Theater.jpeg";
 import GAME from "../utils/GAME.webp";
 import JOGGING from "../utils/jogging.jpeg";
-import {Typography} from "@material-ui/core";
+import {Typography} from "@mui/material";
 import SOMMELIER from "../utils/Sommelie.jpeg";
 
 

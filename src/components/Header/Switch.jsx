@@ -1,5 +1,4 @@
-import {styled} from "@material-ui/core";
-import {Switch} from "@mui/material";
+import {Switch, styled} from "@mui/material";
 
 
 const SwitchButton = styled(Switch)(({theme}) => ({

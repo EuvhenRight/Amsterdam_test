@@ -29,7 +29,7 @@ const AskWriteForm = () => {
         setTimeout(() => {
             dispatch(
                 setAddChatQ(chat))
-             setIsLoading(false)
+            setIsLoading(false)
         }, 5000)
         setTitleQuest('')
         setIsLoading(true)
@@ -41,34 +41,36 @@ const AskWriteForm = () => {
     const canSave = Boolean(titleQuest) && Boolean(authorsId)
 
     return (
-        <form>
-            <div className={classes.formText}> Question
-                <div>
+        <>
+            <form>
+                <div className={classes.addQuestions}> Create a New Questions
+                </div>
+                <div className={classes.input__block}>
                     <label htmlFor={'chatAuthors'}>Authors:</label>
                     <select id={'chatAuthors'} value={authorsId} onChange={addChangeAuthors}>
                         <option value={''}></option>
                         {initialAuthors}
                     </select>
-                    <input className={!canSave ? classes.input: classes.inputActive }
+                    <input className={!canSave ? classes.input : classes.inputActive}
                            onChange={addChangeTitleQuestion}
                            type="text"
                            id="questions"
                            value={titleQuest}
                     />
                 </div>
-            </div>
-            <div>
-                <button className={canSave ? classes.CBut : classes.CreateBut }
-                        onClick={onAddQuestion}
-                        type="button"
-                        disabled={!canSave}
-                >Create Question
-                </button>
-                <div className={classes.preloader}>
-                    {isLoading && <Preloader /> }
+                <div className={classes.createB__block}>
+                    <button className={canSave ? classes.CBut : classes.CreateBut}
+                            onClick={onAddQuestion}
+                            type="button"
+                            disabled={!canSave}
+                    >Create Question
+                    </button>
+                    <div className={classes.preloader}>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+            {isLoading && <Preloader />}
+        </>
     )
 }
 

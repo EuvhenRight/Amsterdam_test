@@ -6,7 +6,7 @@ import SPRAY from "../utils/Aerosol.jpeg";
 import IconButton from "@mui/material/IconButton";
 import HTA from "../utils/HTA.png";
 import YouTube from "../utils/YouTube.png";
-import {Tooltip} from "@material-ui/core";
+import {Tooltip} from "@mui/material";
 
 
 const WorkExperience = () => {

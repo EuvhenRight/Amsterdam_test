@@ -10,10 +10,9 @@ import {
     ImageList,
     ImageListItem,
     ImageListItemBar,
-    ListSubheader,
     Typography
 } from "@mui/material";
-import {Avatar, Container, Tooltip} from "@material-ui/core";
+import {Avatar, Container, Tooltip} from "@mui/material";
 import Marketing from "../utils/Marketing.png";
 import Economics from "../utils/ECONOMICS.jpeg";
 import IconButton from "@mui/material/IconButton";
