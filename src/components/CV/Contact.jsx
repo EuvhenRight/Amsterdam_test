@@ -1,6 +1,6 @@
 import React from "react";
 import Linkedin from "../../components/utils/LinkedIn.webp"
-import cv from "./CV.module.scss";
+// import cv from "./CV.module.scss";
 import Git from "../../components/utils/github-logo-label-text-symbol-transparent-png-2425199.png"
 import Amsterdam from "../../components/utils/pngtree-amsterdam-skyline-street-laser-design-png-image_5421668.png"
 import Logo from "../../components/utils/OSTROHLIADxEUROTRIPS-214.JPG"

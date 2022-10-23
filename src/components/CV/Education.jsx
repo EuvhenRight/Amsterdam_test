@@ -1,5 +1,5 @@
 import React from "react";
-import cv from "./CV.module.scss";
+// import cv from "./CV.module.scss";
 import Geekbrains from "../utils/GeekBrains_logo.png";
 import SideBar from "./SideBar";
 import {
@@ -12,7 +12,7 @@ import {
     ImageListItemBar,
     Typography
 } from "@mui/material";
-import {Avatar, Container, Tooltip} from "@mui/material";
+import {Container} from "@mui/material";
 import Marketing from "../utils/Marketing.png";
 import Economics from "../utils/ECONOMICS.jpeg";
 import IconButton from "@mui/material/IconButton";

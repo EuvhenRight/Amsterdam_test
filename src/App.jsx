@@ -1,6 +1,6 @@
 import './App.module.scss';
 import React from 'react';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {Routes, Route, HashRouter} from "react-router-dom";
 import CreatedQuestionList from "./components/CreatedQuestionList/CreatedQuestionList";
 import Header from "./components/Header/Header";
 import NotFound from "./components/Not Found/NotFound";
@@ -25,7 +25,7 @@ const App = () => {
 
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
                 <CssBaseline/>
@@ -49,7 +49,7 @@ const App = () => {
                 </Box>
             </ThemeProvider>
             </ColorModeContext.Provider>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 export default App;

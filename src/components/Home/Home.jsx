@@ -8,7 +8,7 @@ const Home = () => {
 
     return (
         <Box>
-            <Card style={{ display:'flex', justifyContent:'center', maxHeight:'75%' }}>
+            <Card style={{ display:'flex', justifyContent:'center', maxHeight:'70%' }}>
                 <ImageListItem variant="woven" >
                     <img
                         src={HOME_P}

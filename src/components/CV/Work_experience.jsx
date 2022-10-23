@@ -1,5 +1,5 @@
 import React from "react";
-import cv from "./CV.module.scss";
+// import cv from "./CV.module.scss";
 import SideBar from "./SideBar";
 import {Box, Card, CardContent, CardMedia, Container, Typography} from "@mui/material";
 import SPRAY from "../utils/Aerosol.jpeg";
