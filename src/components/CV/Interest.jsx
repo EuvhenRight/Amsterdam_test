@@ -1,5 +1,5 @@
 import React from "react";
-import cv from "./CV.module.scss";
+// import cv from "./CV.module.scss";
 import SideBar from "./SideBar";
 import {Box, Card, Container, ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
 import MOTOBIKES from "../utils/MOTO.jpeg";
