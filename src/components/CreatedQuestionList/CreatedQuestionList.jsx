@@ -4,7 +4,26 @@ import CreatedQuestionForm from "../CreatedQuestionForm/CreatedQuestionForm";
 import AskWriteForm from "../AskWriteForm/AskWriteForm";
 import {useDispatch, useSelector} from "react-redux";
 import {deleteAllChat} from "../redux/ChatQuestion/ChatQuestionSlice"
-import {Box, Stack} from "@mui/material";
+import {Box, Stack, styled} from "@mui/material";
+import {grey} from "@mui/material/colors";
+
+
+const NewBox = styled(Box)(({theme}) => ({
+    position: "fixed",
+    marginLeft: "50px",
+    [theme.breakpoints.down('md')]: {
+        marginLeft: 5,
+        bottom: 1, left: 0, right: 0,
+        background: grey[400]
+    }
+}));
+
+const SecondBox = styled(Box)(({theme}) => ({
+    flex: 1,
+    [theme.breakpoints.down('md')]: {
+        flex: 0,
+    }
+}));
 
 
 const CreatedQuestionList = () => {
@@ -27,11 +46,18 @@ const CreatedQuestionList = () => {
         <>
             <Stack mt={10}
                    direction={"row"}>
-                <Box flex={1}>
-                    <Box position={"fixed"} ml={10}>
+                <SecondBox>
+                    <NewBox>
                         <AskWriteForm {...chatQ}/>
-                    </Box>
-                </Box>
+                        <div className={classes.buttonQuestionlist}>
+                            {chatQ.length > 0 ?
+                                <button onClick={() => handleAllDeleteChat()} className={classes.remBut}> Remove All
+                                    Question
+                                </button> :
+                                <button disabled> Remove All Question</button>}
+                        </div>
+                    </NewBox>
+                </SecondBox>
                 <Box className={classes.main} flex={2}>
                     <div className={classes.chatQuestions}> Created Questions
                     </div>
@@ -40,17 +66,6 @@ const CreatedQuestionList = () => {
                                 {renderedChatQ}</section> :
                             <div disabled className={classes.questionItemDisabled}> Add question a using below</div>}
                     </div>
-                </Box>
-                <Box flex={1} sx={{display: 'flex', justifyContent: 'center'}}>
-                    <Box position={"fixed"} >
-                        <div className={classes.buttonQuestionlist}>
-                            {chatQ.length > 0 ?
-                                <button onClick={() => handleAllDeleteChat()} className={classes.remBut}> Remove All
-                                    Question
-                                </button> :
-                                <button disabled> Remove All Question</button>}
-                        </div>
-                    </Box>
                 </Box>
             </Stack>
         </>

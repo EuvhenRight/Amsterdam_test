@@ -137,7 +137,7 @@ const Qualification = () => {
             <SideBar/>
             <Box mt={10}>
                 <Container maxWidth="md">
-                    <Card>
+                    <Card sx={{p: 1}}>
                         <CardMedia
                             component="img"
                             sx={{height: 300}}

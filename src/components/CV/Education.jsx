@@ -72,7 +72,7 @@ const Education = () => {
             <Box mt={10}>
                 <SideBar/>
                 <Container maxWidth="md">
-                    <Card>
+                    <Card sx={{p: 1}}>
                         <Typography sx={{textAlign: "center"}} gutterBottom variant="h6" component="div">
                             EDUCATION:
                             <br/>
@@ -93,7 +93,7 @@ const Education = () => {
                                 />
                             </IconButton>
                         </Typography>
-                        <ImageList variant="standard">
+                        <ImageList variant="masonry" >
                             {ItemData.map((item) => (
                                 <ImageListItem key={item.img}>
                                     <img
