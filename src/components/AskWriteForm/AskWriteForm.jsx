@@ -65,11 +65,11 @@ const AskWriteForm = () => {
                             disabled={!canSave}
                     >Create Question
                     </button>
-                    <div className={classes.preloader}>
-                    </div>
                 </div>
             </form>
-            {isLoading && <Preloader />}
+            <div className={classes.preloader}>
+                {isLoading && <Preloader />}
+            </div>
         </>
     )
 }

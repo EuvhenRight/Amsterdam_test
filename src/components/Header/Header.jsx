@@ -1,5 +1,5 @@
 import React, {useContext, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import header from "./Header.module.scss"
 import {
     AppBar,
@@ -21,6 +21,7 @@ import {FormControlLabel, Stack, Tooltip} from "@mui/material";
 import ScienceSharpIcon from '@mui/icons-material/ScienceSharp';
 import SwitchButton from "./Switch";
 import {ColorModeContext} from "../theme";
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 const StyledToolBar = styled(Toolbar)({
@@ -35,6 +36,7 @@ const Header = () => {
     const colorMode = useContext(ColorModeContext)
 
     const [openUserMenu, SetOpenUserMenu] = useState(null)
+    const [openCvMenu, SetOpenCvMenu] = useState(false)
 
     const handleOpenUserMenu = (even) => {
         SetOpenUserMenu(even.currentTarget)
@@ -44,29 +46,93 @@ const Header = () => {
         SetOpenUserMenu(null)
     }
 
-    // const handleChangeTheme = (e) => {
-    //     setMode(mode === 'light' ? 'dark' : 'light')
-    // }
+    const handleOpenCvMenu = (even) => {
+        SetOpenCvMenu(even.currentTarget)
+    }
 
-    // const classes = useStyles();
+    const handleCloseCvMenu = () => {
+        SetOpenCvMenu(false)
+    }
 
     return (
         <>
             <AppBar color="primary" position="fixed">
                 <Container fixed className={header.main}>
                     <StyledToolBar disableGutters>
-                        <Stack  fontFamily={'Fuzzy Bubbles,cursive'}
-                                fontWeight={700}
-                                fontSize={'35px'}
-                                direction="row"
+                        <Stack fontFamily={'Fuzzy Bubbles,cursive'}
+                               fontWeight={700}
+                               fontSize={'35px'}
+                               direction="row"
                                spacing={2}
                                sx={{
                                    alignItems: "center"
                                }}>
-                            <ScienceSharpIcon sx={{fontSize: 40}}/>
-                            <Link to={"/"}
-                                  className={header.main__link}
-                            >My little React Js work </Link>
+                            <Box sx={{display: {xs: "block", sm: 'block', md: 'block', lg: 'none'}}}>
+                                <IconButton
+                                    size="large"
+                                    edge="start"
+                                    color="inherit"
+                                    aria-label="menu"
+                                    onClick={handleOpenCvMenu}
+                                >
+                                    <MenuIcon/>
+                                </IconButton>
+                                    <Menu
+                                        sx={{mt: '45px'}}
+                                        anchorEl={openCvMenu}
+                                        id="account-left-menu"
+                                        open={Boolean(openCvMenu)}
+                                        onClose={handleCloseCvMenu}
+                                        onClick={handleCloseCvMenu}
+                                        anchorOrigin={{
+                                            vertical: 'top',
+                                            horizontal: 'left',
+                                        }}
+                                        keepMounted
+                                        transformOrigin={{
+                                            vertical: 'top',
+                                            horizontal: 'left',
+                                        }}
+                                    >
+                                        <MenuItem onClick={handleCloseCvMenu}>
+                                            <NavLink
+                                                className={header.main__link}
+                                                to={"/cv/contact"}
+                                            >My contacts</NavLink>
+                                        </MenuItem>
+                                        <MenuItem onClick={handleCloseCvMenu}>
+                                            <NavLink
+                                                className={header.main__link}
+                                                to={"/cv/summary"}>Summary</NavLink>
+                                        </MenuItem>
+                                        <MenuItem onClick={handleCloseCvMenu}>
+                                            <NavLink
+                                                className={header.main__link}
+                                                to={"/cv/qualification"}>Qualification</NavLink>
+                                        </MenuItem>
+                                        <MenuItem onClick={handleCloseCvMenu}>
+                                            <NavLink
+                                                className={header.main__link}
+                                                to={"/cv/education"}>Education</NavLink>
+                                        </MenuItem>
+                                        <MenuItem onClick={handleCloseCvMenu}>
+                                            <NavLink
+                                                className={header.main__link}
+                                                to={"/cv/work_experience"}>WorkExperience</NavLink>
+                                        </MenuItem>
+                                        <MenuItem onClick={handleCloseCvMenu}>
+                                            <NavLink
+                                                className={header.main__link}
+                                                to={"/cv/interest"}>Interest</NavLink>
+                                        </MenuItem>
+                                    </Menu>
+                            </Box>
+                            <IconButton component={NavLink} to={"/"}>
+                                <ScienceSharpIcon sx={{fontSize: 40}} />
+                            </IconButton>
+                            <Box sx={{display: {xs: "none", sm: {fontSize: 10}, md: 'block'}}}>
+                               My little React Js work
+                            </Box>
                             <FormControlLabel
                                 control={<SwitchButton onChange={colorMode.toggleColorMode}
                                                        sx={{m: 1}} defaultChecked/>}
@@ -74,7 +140,7 @@ const Header = () => {
                         </Stack>
                         <Box sx={{flexGrow: 0}}>
                             <Tooltip title="Click me">
-                                <IconButton onClick={handleOpenUserMenu}>
+                                <IconButton sx={{fontSize: 15}} onClick={handleOpenUserMenu}>Menu
                                     <Avatar alt="MyLogo" src={Logo}/>
                                 </IconButton>
                             </Tooltip>

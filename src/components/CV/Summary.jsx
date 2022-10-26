@@ -13,7 +13,7 @@ const Summary = () => {
             <Box mt={10}>
                 <SideBar/>
                 <Container maxWidth="md">
-                    <Card>
+                    <Card sx={{p: 1}}>
                         <CardMedia
                             component="img"
                             sx={{height: 300}}

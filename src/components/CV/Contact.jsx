@@ -15,9 +15,9 @@ const Contact = () => {
         <Box mt={10}>
             <SideBar/>
             <Container maxWidth="md">
-                <Card sx={{display: 'flex'}} variant="outlined">
+                <Card sx={{display:{ md: 'flex', p: 1}}} variant="outlined">
                     <CardMedia
-                        sx={{width: 430}}
+                        sx={{minWidth: 430}}
                         component="img"
                         image={Logo}
                         alt="MyPhoto"

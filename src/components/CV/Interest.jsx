@@ -60,16 +60,16 @@ const Interest = () => {
             <Box mt={10}>
                 <SideBar/>
                 <Container maxWidth="md">
-                    <Card>
-                        <Typography component="div" variant="h5"  >
+                    <Card sx={{p: 1}}>
+                        <Typography component="div" variant="h5">
                             INTEREST:
                         </Typography>
-                        <ImageList variant="masonry" cols={3} gap={10}>
+                        <ImageList variant="masonry" cols={1} gap={10} >
                             {ItemData.map((item) => (
                                 <ImageListItem key={item.img}>
                                     <img
                                         src={`${item.img}?w=248&fit=crop&auto=format`}
-                                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=22x`}
                                         alt={item.title}
                                         loading="lazy"
                                     />

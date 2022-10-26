@@ -16,7 +16,7 @@ const WorkExperience = () => {
             <Box mt={10}>
                 <SideBar/>
                 <Container maxWidth="md">
-                    <Card>
+                    <Card sx={{p: 1}}>
                         <CardMedia
                             sx={{height: 300}}
                             component="img"
