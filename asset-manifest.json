@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My-Portfolio-in-React-JS/static/css/main.208d371b.css",
-    "main.js": "/My-Portfolio-in-React-JS/static/js/main.2f8062e4.js",
+    "main.css": "/My-Portfolio-in-React-JS/static/css/main.fd7fc8df.css",
+    "main.js": "/My-Portfolio-in-React-JS/static/js/main.63809b70.js",
     "static/media/OSTROHLIADxEUROTRIPS-214.JPG": "/My-Portfolio-in-React-JS/static/media/OSTROHLIADxEUROTRIPS-214.9bd6305d643f22fadce3.JPG",
     "static/media/SDLC_-_Software_Development_Life_Cycle.png": "/My-Portfolio-in-React-JS/static/media/SDLC_-_Software_Development_Life_Cycle.f416ad0b22e5e0c69810.png",
     "static/media/HTML PRO.png": "/My-Portfolio-in-React-JS/static/media/HTML PRO.f2ef96b6a2b2eae782ff.png",
@@ -60,11 +60,11 @@
     "static/media/Material Ui.png": "/My-Portfolio-in-React-JS/static/media/Material Ui.c05a6d04795bcce29d98.png",
     "static/media/oopjs.webp": "/My-Portfolio-in-React-JS/static/media/oopjs.998382a1a5121f2438d1.webp",
     "index.html": "/My-Portfolio-in-React-JS/index.html",
-    "main.208d371b.css.map": "/My-Portfolio-in-React-JS/static/css/main.208d371b.css.map",
-    "main.2f8062e4.js.map": "/My-Portfolio-in-React-JS/static/js/main.2f8062e4.js.map"
+    "main.fd7fc8df.css.map": "/My-Portfolio-in-React-JS/static/css/main.fd7fc8df.css.map",
+    "main.63809b70.js.map": "/My-Portfolio-in-React-JS/static/js/main.63809b70.js.map"
   },
   "entrypoints": [
-    "static/css/main.208d371b.css",
-    "static/js/main.2f8062e4.js"
+    "static/css/main.fd7fc8df.css",
+    "static/js/main.63809b70.js"
   ]
 }
