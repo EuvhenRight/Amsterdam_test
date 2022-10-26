@@ -8,16 +8,18 @@ const initialState = {
         {
             id: 1,
             authorsId: AUTHORS.Questions,
-            text: 'This is a message for those who view this site. I did not do a good layout on this page. ' +
-                'Its purpose is to show you that I understand what Hooks, Redux Toolkit are, how to make a Slice, ' +
-                'how the React tree works, components, what a page is, and how information is exchanged in React. ' +
-                'I understand that this is primitive, but they always started with something.',
+            text: 'This is a message for those who ARE viewING this site. ' +
+                'I HAVE NOT MADE a good layout on this page YET. IT’S purpose is to show you that I' +
+                ' understand what Hooks, Redux Toolkit are, how to USE Slice, how the React tree AND COMPONENT work, ' +
+                'and how information is exchanged and how data interaction happens in React. ' +
+                'I understand that this is A primitive and SUCCINCT VERSION OF THE WEB APPLICATION, ' +
+                'but they always START with something the journey of a thousand miles begins with one step.',
             date: sub(new Date(), {minutes: 10}).toISOString()
         },
         {
             id: 2,
             authorsId: AUTHORS.Answers,
-            text: 'I ready hard learn and work! P.S. As you read I type all the components "TypeScript"...',
+            text: 'I AM ready TO learn and work HARD! P.S. As you ARE readING it I AM typING all the components "TypeScript"... ',
             date: sub(new Date(), {minutes: 5}).toISOString()
         }
     ],
