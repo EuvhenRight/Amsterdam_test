@@ -1,5 +1,5 @@
 import React from "react";
-import Linkedin from "../../components/utils/LinkedIn.webp"
+import Linkedin from "../../components/utils/LinkedIn.png"
 // import cv from "./CV.module.scss";
 import Git from "../../components/utils/github-logo-label-text-symbol-transparent-png-2425199.png"
 import Amsterdam from "../../components/utils/pngtree-amsterdam-skyline-street-laser-design-png-image_5421668.png"
@@ -30,14 +30,12 @@ const Contact = () => {
                             <br/>
                             e-mail: ugnivenko.ea@gmail.com
                         </Typography>
-                        <Typography gutterBottom variant="button" component="div">
-                            <IconButton href={'https:www.linkedin.com/in/yevhen-uhnivenko-3a9503161/?locale=en_US'}
+                        <Typography  component="div">
+                            <IconButton href={'https://www.linkedin.com/in/yevhen-uhnivenko-3a9503161/?locale=en_US'}
                                         sx={{m: 2}}
                             >
                                 <CardMedia
                                     component="img"
-                                    widht="60"
-                                    height="60"
                                     image={Linkedin}
                                     alt="Link"
                                 />
@@ -47,8 +45,6 @@ const Contact = () => {
                             >
                                 <CardMedia
                                     component="img"
-                                    widht="60"
-                                    height="60"
                                     image={Git}
                                     alt="Git"
                                 />
@@ -66,10 +62,10 @@ const Contact = () => {
                             </IconButton>
                         </Typography>
                         <Typography variant="subtitle1">
-                            Looking for a position of Junior Front-end Developer for React JS and aimed to become
+                            Looking for a position as a Junior Front-end Developer for React JS and aimed to become
                             Senior
-                            FULLSTACK Developer of web and mobile applications (React Developer) in several years
-                            Employment: full time, part time, project work, remote work.
+                            FULLSTACK Developer of web and mobile applications (React Developer) for several years
+                            Employment: full-time, part-time, project work, remote work.
                         </Typography>
                         <Typography variant="subtitle1">
                             Citizenship: Amsterdam, Netherlands.

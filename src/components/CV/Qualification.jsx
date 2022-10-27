@@ -149,7 +149,7 @@ const Qualification = () => {
                                 QUALIFICATIONS & SKILLS:
                             </Typography>
                             <Typography variant="subtitle1" color="text.secondary">
-                                A beginner in IT industry with acquired knowledge and practical skills in FrontEnd and
+                                A beginner in the IT industry with acquired knowledge and practical skills in FrontEnd and
                                 BackEnd Development (Node JS)
                             </Typography>
                             <Typography gutterBottom variant="h5" component="div" sx={{mt: 2}}>

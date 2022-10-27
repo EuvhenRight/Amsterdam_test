@@ -1,13 +1,13 @@
 import classes from "./AskWriteForm.module.scss";
 import {useState} from "react";
-import {setAddChatQ} from "../redux/ChatQuestion/ChatQuestionSlice";
+import {deleteAllChat, setAddChatQ} from "../redux/ChatQuestion/ChatQuestionSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {nanoid} from "@reduxjs/toolkit";
 import React from "react";
 import Preloader from "../Preloader/Preloader";
 
 
-const AskWriteForm = () => {
+const AskWriteForm = ({chatQ}) => {
     const dispatch = useDispatch();
 
     const [titleQuest, setTitleQuest] = useState('')
@@ -33,6 +33,10 @@ const AskWriteForm = () => {
         }, 5000)
         setTitleQuest('')
         setIsLoading(true)
+    }
+
+    const handleAllDeleteChat = () => {
+        dispatch(deleteAllChat())
     }
 
     const initialAuthors = authors.map(author => (
@@ -65,11 +69,18 @@ const AskWriteForm = () => {
                             disabled={!canSave}
                     >Create Question
                     </button>
+                        {chatQ.length > 0 ?
+                            <button onClick={() => handleAllDeleteChat()} className={classes.remBut}> Remove All
+                                Question
+                            </button> :
+                            <button disabled> Remove All Question</button>}
                 </div>
+                <div className={classes.preloader}>
+                    {isLoading && <Preloader />}
+                </div>
+
             </form>
-            <div className={classes.preloader}>
-                {isLoading && <Preloader />}
-            </div>
+
         </>
     )
 }

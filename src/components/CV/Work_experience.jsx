@@ -50,7 +50,7 @@ const WorkExperience = () => {
                             <Typography gutterBottom variant="subtitle1" component="div" color="text.secondary">
                                 Responsibilities:
                                 <br/>
-                                Carried out marketing research of the advertising services market
+                                Carried out marketing research in the advertising services market
                                 Organized active sales of own production to corporate clients
                                 A proposal was developed for the development of new market segments, identifying
                                 market entry with a variety of products
@@ -64,7 +64,7 @@ const WorkExperience = () => {
                                 <br/>
                                 Achievements:
                                 <br/>
-                                Created his own production line and laboratory for the development of technical products
+                                Created his production line and laboratory for the development of technical products
                                 Certification of the quality management system according to the international standard
                                 ISO
                                 9001:2015
@@ -90,7 +90,7 @@ const WorkExperience = () => {
                                 </IconButton>
                             </Typography>
                             <Typography variant="button">
-                                HYSTORY:
+                                HISTORY:
                             </Typography>
                             <Typography variant="subtitle1" color="text.secondary">
                                 WEST PARFUME LLC:
