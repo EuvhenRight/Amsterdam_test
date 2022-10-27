@@ -30,10 +30,10 @@ const Summary = () => {
                                 OBJECTIVES:
                             </Typography>
                             <Typography variant="subtitle1" color="text.secondary">
-                                Looking for a position of Junior Front-end Developer for React JS and aimed to become
+                                Looking for a position as a Junior Front-end Developer for React JS and aimed to become
                                 Senior
-                                FULLSTACK Developer of web and mobile applications (React Developer) in several years
-                                Employment: full time, part time, project work, remote work.
+                                FULLSTACK Developer of web and mobile applications (React Developer) for several years
+                                Employment: full-time, part-time, project work, remote work.
                             </Typography>
                             <Typography variant="subtitle1" color="text.secondary">
                                 Citizenship: Amsterdam, Netherlands.

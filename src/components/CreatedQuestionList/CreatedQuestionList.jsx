@@ -3,24 +3,26 @@ import React from "react";
 import CreatedQuestionForm from "../CreatedQuestionForm/CreatedQuestionForm";
 import AskWriteForm from "../AskWriteForm/AskWriteForm";
 import {useDispatch, useSelector} from "react-redux";
-import {deleteAllChat} from "../redux/ChatQuestion/ChatQuestionSlice"
 import {Box, Stack, styled} from "@mui/material";
 import {grey} from "@mui/material/colors";
 
 
-const NewBox = styled(Box)(({theme}) => ({
+const SecondBox = styled(Box)(({theme}) => ({
     position: "fixed",
-    marginLeft: "50px",
-    [theme.breakpoints.down('md')]: {
-        marginLeft: 5,
-        bottom: 1, left: 0, right: 0,
-        background: grey[400]
-    }
+    marginLeft:'10px',
+        [theme.breakpoints.down('sm')]: {
+    marginLeft: 0,
+    bottom: 0, left: 0, right: 0,
+    background: grey[600],
+},
+            [theme.breakpoints.up('md')]: {
+    marginLeft: '50px',
+}
 }));
 
-const SecondBox = styled(Box)(({theme}) => ({
+const FirstBox = styled(Box)(({theme}) => ({
     flex: 1,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
         flex: 0,
     }
 }));
@@ -34,9 +36,6 @@ const CreatedQuestionList = () => {
 
     const realTime = chatQ.slice().sort((a, b) => b.date.localeCompare(a.date))
 
-    const handleAllDeleteChat = () => {
-        dispatch(deleteAllChat())
-    }
 
     const renderedChatQ = realTime.map(chat => (
         <CreatedQuestionForm key={chat.id} chat={chat}/>
@@ -46,18 +45,11 @@ const CreatedQuestionList = () => {
         <>
             <Stack mt={10}
                    direction={"row"}>
-                <SecondBox>
-                    <NewBox>
-                        <AskWriteForm {...chatQ}/>
-                        <div className={classes.buttonQuestionlist}>
-                            {chatQ.length > 0 ?
-                                <button onClick={() => handleAllDeleteChat()} className={classes.remBut}> Remove All
-                                    Question
-                                </button> :
-                                <button disabled> Remove All Question</button>}
-                        </div>
-                    </NewBox>
-                </SecondBox>
+                <FirstBox>
+                    <SecondBox>
+                        <AskWriteForm chatQ={chatQ}/>
+                    </SecondBox>
+                </FirstBox>
                 <Box className={classes.main} flex={2}>
                     <div className={classes.chatQuestions}> Created Questions
                     </div>
