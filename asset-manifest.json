@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My-Portfolio-in-React-JS/static/css/main.490dbc25.css",
-    "main.js": "/My-Portfolio-in-React-JS/static/js/main.8912033b.js",
+    "main.js": "/My-Portfolio-in-React-JS/static/js/main.28c69cbd.js",
     "static/media/OSTROHLIADxEUROTRIPS-214.JPG": "/My-Portfolio-in-React-JS/static/media/OSTROHLIADxEUROTRIPS-214.9bd6305d643f22fadce3.JPG",
     "static/media/SDLC_-_Software_Development_Life_Cycle.png": "/My-Portfolio-in-React-JS/static/media/SDLC_-_Software_Development_Life_Cycle.f416ad0b22e5e0c69810.png",
     "static/media/HTML PRO.png": "/My-Portfolio-in-React-JS/static/media/HTML PRO.f2ef96b6a2b2eae782ff.png",
@@ -59,10 +59,10 @@
     "static/media/oopjs.webp": "/My-Portfolio-in-React-JS/static/media/oopjs.998382a1a5121f2438d1.webp",
     "index.html": "/My-Portfolio-in-React-JS/index.html",
     "main.490dbc25.css.map": "/My-Portfolio-in-React-JS/static/css/main.490dbc25.css.map",
-    "main.8912033b.js.map": "/My-Portfolio-in-React-JS/static/js/main.8912033b.js.map"
+    "main.28c69cbd.js.map": "/My-Portfolio-in-React-JS/static/js/main.28c69cbd.js.map"
   },
   "entrypoints": [
     "static/css/main.490dbc25.css",
-    "static/js/main.8912033b.js"
+    "static/js/main.28c69cbd.js"
   ]
 }
