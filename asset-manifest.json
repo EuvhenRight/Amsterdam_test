@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My-Portfolio-in-React-JS/static/css/main.fd7fc8df.css",
-    "main.js": "/My-Portfolio-in-React-JS/static/js/main.63809b70.js",
+    "main.css": "/My-Portfolio-in-React-JS/static/css/main.490dbc25.css",
+    "main.js": "/My-Portfolio-in-React-JS/static/js/main.8912033b.js",
     "static/media/OSTROHLIADxEUROTRIPS-214.JPG": "/My-Portfolio-in-React-JS/static/media/OSTROHLIADxEUROTRIPS-214.9bd6305d643f22fadce3.JPG",
     "static/media/SDLC_-_Software_Development_Life_Cycle.png": "/My-Portfolio-in-React-JS/static/media/SDLC_-_Software_Development_Life_Cycle.f416ad0b22e5e0c69810.png",
     "static/media/HTML PRO.png": "/My-Portfolio-in-React-JS/static/media/HTML PRO.f2ef96b6a2b2eae782ff.png",
@@ -39,10 +39,8 @@
     "static/media/DDUU.png": "/My-Portfolio-in-React-JS/static/media/DDUU.2ef0ae62d46b628a535a.png",
     "static/media/Less.png": "/My-Portfolio-in-React-JS/static/media/Less.06681f6cf0a6663a9613.png",
     "static/media/jogging.jpeg": "/My-Portfolio-in-React-JS/static/media/jogging.1cc3fe8e5eb18bd946e1.jpeg",
-    "static/media/github-logo-label-text-symbol-transparent-png-2425199.png": "/My-Portfolio-in-React-JS/static/media/github-logo-label-text-symbol-transparent-png-2425199.a5b571c3a721d88b5aa3.png",
     "static/media/CBCOMPATIBILTY.png": "/My-Portfolio-in-React-JS/static/media/CBCOMPATIBILTY.e2729e4da1548cf3f69a.png",
     "static/media/webpack.png": "/My-Portfolio-in-React-JS/static/media/webpack.fd0a9a11b1489d84c229.png",
-    "static/media/LinkedIn.webp": "/My-Portfolio-in-React-JS/static/media/LinkedIn.d9519255b4f090149385.webp",
     "static/media/CSS3.png": "/My-Portfolio-in-React-JS/static/media/CSS3.4e67641bb68b658d9b2b.png",
     "static/media/JSON 2.png": "/My-Portfolio-in-React-JS/static/media/JSON 2.f763fa54ea556528bb85.png",
     "static/media/mediaqueries.png": "/My-Portfolio-in-React-JS/static/media/mediaqueries.5b6d97d534930644a4f8.png",
@@ -60,11 +58,11 @@
     "static/media/Material Ui.png": "/My-Portfolio-in-React-JS/static/media/Material Ui.c05a6d04795bcce29d98.png",
     "static/media/oopjs.webp": "/My-Portfolio-in-React-JS/static/media/oopjs.998382a1a5121f2438d1.webp",
     "index.html": "/My-Portfolio-in-React-JS/index.html",
-    "main.fd7fc8df.css.map": "/My-Portfolio-in-React-JS/static/css/main.fd7fc8df.css.map",
-    "main.63809b70.js.map": "/My-Portfolio-in-React-JS/static/js/main.63809b70.js.map"
+    "main.490dbc25.css.map": "/My-Portfolio-in-React-JS/static/css/main.490dbc25.css.map",
+    "main.8912033b.js.map": "/My-Portfolio-in-React-JS/static/js/main.8912033b.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd7fc8df.css",
-    "static/js/main.63809b70.js"
+    "static/css/main.490dbc25.css",
+    "static/js/main.8912033b.js"
   ]
 }
