@@ -15,11 +15,10 @@ import {
 import IconButton from '@mui/material/IconButton';
 import Logo from "./../utils/IMAGE 2022-08-05 16:43:07.jpg";
 import {FormControlLabel, Stack, Tooltip} from "@mui/material";
-import ScienceSharpIcon from '@mui/icons-material/ScienceSharp';
 import SwitchButton from "./Switch";
 import {ColorModeContext} from "../theme";
-
-
+import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
 
 const StyledToolBar = styled(Toolbar)({
     display: 'flex',
@@ -51,12 +50,12 @@ const Header = () => {
                                fontWeight={700}
                                fontSize={'35px'}
                                direction="row"
-                               spacing={2}
+                               spacing={1}
                                sx={{
                                    alignItems: "center"
                                }}>
                             <IconButton component={NavLink} to={"/"}>
-                                <ScienceSharpIcon sx={{fontSize: 40}} />
+                                <HomeIcon sx={{fontSize: 40}} />
                             </IconButton>
                             <Box sx={{display: {xs: "none", sm: {fontSize: 10}, md: 'block'}}}>
                                My little React Js work
@@ -68,10 +67,20 @@ const Header = () => {
                         </Stack>
                         <Box sx={{flexGrow: 0}}>
                             <Tooltip title="Click me">
-                                <IconButton sx={{fontSize: 15}} onClick={handleOpenUserMenu}>Menu
-                                    <Avatar alt="MyLogo" src={Logo}/>
+                                <IconButton
+                                    onClick={handleOpenUserMenu}
+                                    size="large"
+                                    edge="start"
+                                    color="inherit"
+                                    aria-label="menu"
+                                    sx={{ mr: 2 }}
+                                >
+                                    <MenuIcon />
                                 </IconButton>
                             </Tooltip>
+                            <IconButton sx={{fontSize: 15}}>
+                                <Avatar alt="MyLogo" src={Logo}/>
+                            </IconButton>
                             <Menu
                                 sx={{mt: '45px'}}
                                 anchorEl={openUserMenu}

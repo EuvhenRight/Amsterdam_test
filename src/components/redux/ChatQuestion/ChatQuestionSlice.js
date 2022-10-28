@@ -3,7 +3,7 @@ import {AUTHORS} from "../../utils/constants";
 import {sub} from "date-fns"
 
 
-const initialState = {
+const initialState = { // My state in Slice
     chatQ: [
         {
             id: 1,
@@ -12,13 +12,13 @@ const initialState = {
                 'Its purpose is to show you that I understand what Hooks and Redux Toolkit are, how to use Slice, ' +
                 'how the React tree and component work, how information is exchanged, and how data interaction happens' +
                 ' in React. I understand that this is A primitive and succinct version of the web application, ' +
-                'but they always start with something the journey of a thousand miles begins with one step and viewing.',
+                'but the journey of a thousand miles begins with one step.',
             date: sub(new Date(), {minutes: 10}).toISOString()
         },
         {
             id: 2,
             authorsId: AUTHORS.Answers,
-            text: 'I am ready to learn and work HARD! P.S. As you are reading it I am typing all the components "TypeScript"... ',
+            text: 'I am ready to learn and work HARD! P.S. As you are reading it I am creating all the components "TypeScript"... ',
             date: sub(new Date(), {minutes: 5}).toISOString()
         }
     ],
@@ -29,7 +29,7 @@ const initialState = {
 export const chatQuestionSlice = createSlice({
         name: 'chatList',
         initialState,
-        reducers: {
+        reducers: { // logic in Slice
             setAddChatQ(state, action) {
                 state.chatQ.push(action.payload)
             },
@@ -61,7 +61,7 @@ export const chatQuestionSlice = createSlice({
 )
 
 
-export const {setAddChatQ, deleteAddChat, deleteAllChat, sortChat, setEditText} = chatQuestionSlice.actions
+export const {setAddChatQ, deleteAddChat, deleteAllChat, setEditText} = chatQuestionSlice.actions
 
 
 export default chatQuestionSlice.reducer
